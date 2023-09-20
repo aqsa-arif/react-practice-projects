@@ -7,8 +7,8 @@ import classes from './HeaderCartButton.module.css';
 const HeaderCartButton = (props) => { 
   const {items} = useContext(CartContext);
   const [btnHighlighted, setBtnHighlighted] = useState(false);
-
-  const numberOfItemsInCart = items.reduce((accumulator, item) => {
+ 
+  const numberOfItemsInCart = items?.reduce((accumulator, item) => {
     return accumulator + item.quantity;
   },0);  
 
@@ -34,7 +34,7 @@ const HeaderCartButton = (props) => {
         <CartIcon />
       </span>
       <span>Your Cart</span>
-      <span className={classes.badge}>{numberOfItemsInCart}</span>
+      <span className={classes.badge}>{numberOfItemsInCart ? numberOfItemsInCart : 0}</span>
     </button>
   )
 }

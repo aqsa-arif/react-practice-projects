@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './CartItem.module.css';
 
 const CartItem = (props) => {
-    const {name, price, quantity } = props.item;
+    const {name, price, quantity } = props.item; 
 
     const Formatprice = `$${price.toFixed(2)}`
 
