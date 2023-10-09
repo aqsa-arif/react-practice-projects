@@ -1,0 +1,1 @@
+export type userType = { sessionId: number, name: string }
